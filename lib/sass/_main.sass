@@ -1,0 +1,683 @@
+//color
+$white: #fff
+
+$blue: #007aff
+$light-blue: #3c9ad8
+$dark-blue: #2d313c
+
+$orange: #ff9800
+$green: #4cd964
+$grey: #a6a6a6
+$black: #202020
+//////
+@import compass/css3
+
++font-face("big-john", font-files("../fonts/BIG_JOHN.otf"))
+
+
+.container
+    @extend .clearfix
+    width: 684px
+    margin: 0 auto
+
+.rotate
+    //-webkit-transform: rotate(-7deg)
+    //-moz-transform: rotate(-7deg)
+    //-ms-transform: rotate(-7deg)
+    //-o-transform: rotate(-7deg)
+    transform: rotate(0deg)
+
+
+
+
+
+.wrap
+    min-width: 240px
+    overflow: hidden
+    font-family: Roboto
+
+
+h2
+    @extend .rotate
+    text-align: center
+    text-transform: uppercase
+    font:
+        size: 24px
+        style: italic
+        weight: 700
+
+.title
+    position: relative
+    display: inline-block
+    color: $white
+
+    //&:before,
+    //&:after
+    //    content: ' '
+    //    position: absolute
+    //    left: 10%
+    //    bottom: -4px
+    //    width: 80%
+    //    height: 2px
+    //    background: $white
+    //
+    //&:after
+    //    top: -7px
+    //    left: 20%
+    //    bottom: auto
+    //    width: 60%
+
+
+
+.header
+    position: relative
+    padding: 12px 0
+    margin-bottom: 40px
+    color: $white
+
+    background: url("../pic/bg-header.jpg") no-repeat 0 -3%
+    background-size: cover
+
+    border-bottom: 10px solid $blue
+    border-bottom-left-radius: 15px
+    border-bottom-right-radius: 15px
+
+
+.header__in
+    position: relative
+    @extend .container
+
+h1
+    font-size: 32px
+    font-family: 'big-john'
+
+.menu
+    width: 620px
+    margin: 0 auto
+    text-align: center
+    line-height: 125px
+
+.menu__item
+    margin: 0 16px
+    padding: 2px 0
+    display: inline-block
+    line-height: 1
+    color: $white
+    vertical-align: middle
+    text-transform: uppercase
+    font-weight: 400
+
+a.menu__item:hover
+    border-bottom: 1px solid $white
+
+h1.menu__item
+    position: relative
+    top: 4px
+
+
+.header__title
+    @extend .rotate
+    position: absolute
+    width: 280px
+    top: 30px
+    left: 35px
+    color: $white
+    line-height: 1.1
+    text-align: center
+    text-transform: uppercase
+    font:
+        size: 34px
+        //style: italic
+        weight: 700
+
+
+    &__item
+        display: block
+        text-shadow: -1px 0 2px #238dba
+        
+    &--small
+        font:
+            size: 14px
+            weight: 500
+
+    &--light
+        position: relative
+        display: inline-block
+        margin-bottom: 8px
+
+        -webkit-box-shadow: 0
+        -moz-box-shadow: 0
+        box-shadow: 0
+
+        font:
+            size: 24px
+            weight: 300
+
+        &:before,
+        &:after
+            content: ' '
+            position: absolute
+            left: -10%
+            bottom: -1px
+            width: 120%
+            height: 1px
+            background: $white
+
+        &:after
+            top: -5px
+            left: 10%
+            bottom: auto
+            width: 80%
+
+    &--circle
+        position: relative
+        display: inline-block
+
+        -webkit-box-shadow: 0
+        -moz-box-shadow: 0
+        box-shadow: 0
+
+        &:before,
+        &:after
+            content: ' '
+            position: absolute
+            top: 50%
+            left: -15px
+            width: 5px
+            height: 5px
+            margin-top: -6px
+
+            border: 2px solid $white
+            border-radius: 100%
+
+        &:after
+            left: auto
+            right: -15px
+
+.header__pic
+    padding: 115px 0 50px
+    text-align: right
+
+
+
+
+
+.description
+    margin-top: -40px
+    //padding: 40px 0 25px
+    color: $black
+
+.description__title
+    position: relative
+    top: 95px
+    margin-bottom: 160px
+
+    .title
+        color: $black
+        &:before,
+        &:after
+            background: $black
+
+
+.description__row
+    @extend .container
+    font-size: 0
+
+.description__item
+    width: 21%
+    padding: 0 2%
+    margin-bottom: 40px
+    //float: left
+    display: inline-block
+    vertical-align: top
+    text-align: center
+
+.description__item__text
+    margin-top: 15px
+    text-transform: uppercase
+    font-size: 16px
+
+
+
+
+
+.about
+    position: relative
+    margin-top: 120px
+    background: $dark-blue
+    border-bottom: 10px solid #1d2027
+    border-bottom-left-radius: 10px 18px
+    border-bottom-right-radius: 10px 18px
+
+
+.about--mount-1,
+.about--mount-2
+    content: ' '
+    position: absolute
+    top: -130px
+    left: -3%
+    width: 106%
+    height: 130px
+    background-repeat: no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    z-index: 1
+
+.about--mount-1
+    background-image: url("../pic/mountain-1.png")
+    background-position: 0 0
+
+.about--mount-2
+    background-image: url("../pic/mountain-2.png")
+    background-position: 0 100%
+
+
+.about__title
+    padding: 40px 0
+    clear: both
+
+.about__description
+    @extend .container
+    margin-bottom: 35px
+    color: $white
+    text-align: center
+    line-height: 23px
+
+    font-weight: 300
+
+.about__step
+    @extend .container
+    position: relative
+
+.about__step__item
+    @extend .clearfix
+    position: relative
+    //display: table
+    padding-bottom: 80px
+
+    &:nth-of-type(1)
+        padding-top: 120px
+
+    &:nth-of-type(2)
+        padding-top: 5px
+
+    &:nth-of-type(3)
+        padding-bottom: 168px
+
+
+
+
+.about__step__item__text
+    width: 365% * 100 / 684
+    margin: 0 8% * 100 / 684
+    display: table-cell
+    vertical-align: middle
+    //color: $grey
+    color: #e4e4e4
+    font-weight: 300
+
+.about__step__item__text__title
+    color: $white
+    font-size: 19px
+
+.about__step__item__pic
+    position: relative
+    width: 300% * 100/ 684
+    padding: 0 62px
+    display: table-cell
+
+    &--right
+        padding: 0 80px
+        text-align: right
+
+
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        display: block
+
+.ab-1
+    &:before
+        top: -50px
+        left: -32px
+        @extend .icon-point-1
+
+    &:after
+        top: 150px
+        right: 180px
+        @extend .icon-point-2
+
+.ab-2
+    &:before
+        top: 150px
+        left: 53%
+        @extend .icon-point-3
+
+.ab-3
+    &:before
+        top: 153px
+        left: -35px
+        @extend .icon-point-4
+
+
+
+
+.about__step__item__pic__box
+    position: relative
+    top: 10px
+    display: block
+
+    &:before
+        content: ''
+        position: absolute
+        display: block
+        top: -10px
+        left: -10px
+
+.el-1
+    &:before
+        @extend .icon-elips-1
+.el-2
+    &:before
+        left: auto
+        right: -10px
+        @extend .icon-elips-2
+.el-3
+    &:before
+        @extend .icon-elips-3
+
+
+.about__step__item__pic__img
+    width: 124px
+    height: 124px
+    //opacity: .3
+    border-radius: 100%
+
+
+
+
+
+.about__works
+    padding: 70px 0 65px
+
+.about__works__title
+    margin-bottom: 70px
+
+
+.slider
+    position: relative
+    width: 580px
+    margin: 0 auto
+
+.slider__box
+    overflow: hidden
+
+.slider__control
+    @extend .animate
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 32px
+    height: 32px
+    margin: auto
+    line-height: 32px
+    opacity: 0.7
+
+    &:hover
+        opacity: 1
+
+.btn-prev
+    left: -50px
+.btn-next
+    right: -50px
+
+.slider__container
+    position: relative
+    overflow: hidden
+
+.slider__item
+    position: relative
+    width: 290px
+    height: 150px
+    float: left
+    overflow: hidden
+
+    &:hover
+        .slider__item__info
+            opacity: 0
+            visibility: hidden
+
+            &__type
+                transform: translateX(30%)
+            &__name
+                transform: translateX(30%)
+
+        .slider__item__description
+            opacity: 1
+            visibility: visible
+            transform: scale(1)
+
+            &__btn
+                top: 22px
+
+        .slider__item__img
+            -webkit-transform: scale(1.1)
+            -moz-transform: scale(1.1)
+            -ms-transform: scale(1.1)
+            -o-transform: scale(1.1)
+            transform: scale(1.1)
+
+
+.slider__item__img
+    @extend .animate
+    width: 100%
+    height: 100%
+
+
+
+.slider__item__description
+    @extend .animate
+    -webkit-transition-delay: .1s
+    -moz-transition-delay: .1s
+    -ms-transition-delay: .1s
+    -o-transition-delay: .1s
+    transition-delay: .1s
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    line-height: 150px
+    text-align: center
+    opacity: 0
+    visibility: hidden
+    background: rgba(#34aadc, 0.7)
+    z-index: 3
+    transform: scale(5)
+
+    &__btn
+        @extend .animate
+        -webkit-transition-delay: .35s
+        -moz-transition-delay: .35s
+        -ms-transition-delay: .35s
+        -o-transition-delay: .35s
+        transition-delay: .35s
+        position: absolute
+        top: -50px
+        right: 8px
+        padding: 5px
+        line-height: 1
+        color: $black
+        background: $white
+        font:
+            size: 10px
+            weight: 300
+
+    &__text
+        position: relative
+        color: #fefefe
+        font-size: 22px
+        text-transform: uppercase
+
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            width: 45px
+            height: 1px
+            left: 0
+            right: 0
+            margin: auto
+            background: #fff
+
+        &:before
+            top: -2px
+        &:after
+            bottom: -2px
+
+
+.slider__item__info
+    @extend .animate
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 10px 8px
+    opacity: 1
+    color: $white
+    text-align: right
+    font-weight: 300
+    z-index: 2
+
+    &__type
+        @extend .animate
+        margin-bottom: 5px
+        font-size: 9px
+        transform: translateX(0%)
+
+    &__name
+        @extend .animate
+        font-size: 20px
+        transform: translateX(0%)
+
+
+.service
+    padding: 50px 0 85px
+
+.service__title
+    margin-bottom: 50px
+
+    .title
+        color: $black
+        &:before,
+        &:after
+            background: $black
+
+.service__row
+    @extend .clearfix
+    margin: 0 auto
+    text-align: center
+
+.service__item
+    width: 260px
+    margin: 0 23px
+    padding: 22px 0 5px
+    display: inline-block
+    vertical-align: top
+
+    background-image: url("../pic/bg-order.jpg")
+    background-repeat: no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+
+    border-radius: 3px
+
+    &:first-child
+        //margin-top: 32px
+        background-image: url("../pic/bg-order-2.jpg")
+
+.service__item__title
+    margin-bottom: 15px
+    color: $white
+    text-shadow: 0 0 3px #0464cc
+    text-transform: uppercase
+    font-size: 26px
+    font-weight: 400
+
+.service__item__content
+    position: relative
+    left: -6px
+    margin: 12px 0 0
+    padding: 35px 20px
+    text-align: left
+    background: #3c9ad8
+    border-radius: 5px
+
+.service__item__list
+    margin: 38px 10px 45px 5px
+    color: $white
+
+.service__item__list__item
+    margin-bottom: 18px
+    font-size: 12px
+    font-weight: 300
+
+    p
+        overflow: hidden
+
+    &:before
+        content: ' '
+        position: relative
+        top: 4px
+        width: 6px
+        height: 6px
+        margin-right: 10px
+        margin-bottom: 5px
+        display: block
+        float: left
+        vertical-align: middle
+        border: 2px solid #fff
+        border-radius: 100%
+
+
+
+
+
+.contact
+    padding: 50px 0 45px
+    text-align: center
+    background: $dark-blue
+    border-bottom: 10px solid #1d2027
+
+.contact__title
+    margin-bottom: 45px
+
+.contact__mail
+    @extend .animate
+    margin-bottom: 22px
+    display: inline-block
+    color: #34aadc
+    font-size: 24px
+    text-transform: uppercase
+
+    &:hover
+        color: lighten(#34aadc, 10%)
+
+.contact__b-tel
+    width: 270px
+    margin: 0 auto
+    //margin-bottom: 35px
+    text-align: center
+
+.contact__b-tel__row
+    color: $white
+    margin-bottom: 22px
+
+.contact__tel
+    @extend .animate
+    color: $white
+
+    &:hover
+        color: darken($white, 10%)

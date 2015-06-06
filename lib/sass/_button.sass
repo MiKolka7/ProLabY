@@ -1,0 +1,40 @@
+@import "compass/css3/user-interface"
+
+//
+//input,
+//select
+//    +input-placeholder
+//        color: #b0aa9a
+
+
+.btn
+    @extend .animate
+    width: 185px
+    height: 52px
+    margin: 0 auto
+    color: $white
+    display: block
+    line-height: 52px
+    text-align: center
+    text-transform: uppercase
+    border-radius: 5px
+    font-size: 24px
+
+    &--orange
+        background: $orange
+
+        &:hover
+            background: darken($orange, 5%)
+
+        &:active
+            background: darken($orange, 15%)
+
+    &--green
+        margin-top: 79px
+        background: $green
+
+        &:hover
+            background: darken($green, 8%)
+
+        &:active
+            background: darken($green, 15%)

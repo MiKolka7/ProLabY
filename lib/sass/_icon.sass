@@ -1,0 +1,53 @@
+@import compass/utilities/sprites
+
+$icon-spacing: 20px
+$icon-sprite-dimensions: true
+
+
+@import icon/*.png
+@include all-icon-sprites
+
+i
+    display: inline-block
+
+
+
+.icon-s-1,
+.icon-s-2,
+.icon-s-3
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 35px
+    right: auto
+    //width: 62px
+    //height: 62px
+    margin: auto
+    //border: 2px solid $white
+    //border-radius: 100%
+    z-index: 2
+
+.icon-s-2
+    left: auto
+    right: 35px
+
+
+
+.icon-roket
+    position: absolute
+    background-image: url("../pic/icon/roket2.png")
+    background-position: 0
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    transform: rotate(180deg)
+
+.icon-arrow-down
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+
+.icon-pc
+    height: 48px
