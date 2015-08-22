@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>ProlabY</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Prolaby</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <link rel="shortcut icon" href="favicon.ico" />
     <link href="lib/css/style.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin,cyrillic'
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin,cyrillic'
           rel='stylesheet'
           type='text/css'>
 
@@ -54,49 +55,49 @@
 
         <ul class="description__row">
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-mobiledev"></i>
                 <p class="description__item__text">
                     Android & iOS
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-ui"></i>
                 <p class="description__item__text">
                     User interface design
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-webdesign"></i>
                 <p class="description__item__text">
                     Web Design
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-ux"></i>
                 <p class="description__item__text">
                     User Experience
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-frontend"></i>
                 <p class="description__item__text">
                     Front-End Development
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-onepage"></i>
                 <p class="description__item__text">
                     One page website
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-parallax"></i>
                 <p class="description__item__text">
                     Animated/ Parallax website
                 </p>
             </li>
             <li class="description__item">
-                <i class="icon-iphone"></i>
+                <i class="icon-wpjoom"></i>
                 <p class="description__item__text">
                     Wordpress/ Joomla website
                 </p>
@@ -392,7 +393,7 @@
                             <p>Design and Application Development</p>
                         </li>
                         <li class="service__item__list__item">
-                            <p>Publication in the AppStore and Android Market</p>
+                            <p>Publication in the AppStore and Google Play</p>
                         </li>
                         <li class="service__item__list__item">
                             <p>Creating applications, in addition to the site</p>
@@ -455,6 +456,17 @@
 <script src="lib/js/jquery.waypoints-2.0.0.js"></script>
 <script src="lib/js/modal.js"></script>
 <script src="lib/js/app.js"></script>
+<script>
+    $(function() {
+        var $serviceItems = $('.service__item__content')
+        var height = 0
+        $serviceItems.each(function(index, item){
+            var itemHeight = $(item)    .height()
+            if(height < itemHeight) height = itemHeight
+        })
+        $serviceItems.height(height)
+    })
+</script>
 
 </body>
 </html>
